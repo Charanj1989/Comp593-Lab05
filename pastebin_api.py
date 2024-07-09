@@ -5,7 +5,7 @@ https://pastebin.com/doc_api
 import requests
 
 PASTEBIN_API_POST_URL = 'https://pastebin.com/api/api_post.php'
-API_DEV_KEY = 'Put your API key here'
+API_DEV_KEY = '2UqxS-yWZhF3oaV7Jl5iDUcN7v1BP1dp'
 
 def post_new_paste(title, body_text, expiration='N', listed=True):
     """Posts a new paste to PasteBin
@@ -37,5 +37,5 @@ def post_new_paste(title, body_text, expiration='N', listed=True):
             print("Success!")
     else:
         print("Failure in creating paste")
-        print(f'Response code: {resp_msg.status.code}' ({resp_msg.reason}))
+        print(f'Response code: {resp_msg.status.code} ({resp_msg.reason})')
     return resp_msg.text
